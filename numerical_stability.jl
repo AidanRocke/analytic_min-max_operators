@@ -12,13 +12,13 @@ function numerical_stability(method,type::Int64)
 
 			max_ = maximum(X)
 
-			relative_errors[i] = abs(max_-method(X,i))/max_
+			relative_errors[i] = abs(max_-method(X,i))/abs(max_)
 
 		else 
 
 			min_ = minimum(X)
 
-			relative_errors[i] = abs(min_-method(X,i))/min_
+			relative_errors[i] = abs(min_-method(X,i))/abs(min_)
 
 		end
 
