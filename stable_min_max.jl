@@ -24,6 +24,6 @@ function analytic_min(X::Array{Float64, 1},N::Int64)
 
     log_ = -log(neg_exp_sum)/N
 
-    return (sigma*log_)+mu
+    return (log_*sigma)+mu
 
 end
