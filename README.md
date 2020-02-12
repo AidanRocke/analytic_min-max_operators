@@ -1,9 +1,9 @@
 ## analytic_min-max_operators
 
 Within the context of optimisation, analytic approximations of the min and max operators 
-is very useful. I found a few proposed solutions on https://mathoverflow.net/questions/35191/a-differentiable-approximation-to-the-minimum-function
+are very useful. I found a few proposed solutions on the [MathOverflow](https://mathoverflow.net/questions/35191/a-differentiable-approximation-to-the-minimum-function) 
 and after analysing their numerical stability decided to formulate my own variant inspired
-by the infinity norm: https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_finite_dimensions
+by the [infinity norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_finite_dimensions). 
 
 ## To improve numerical stability my method does the following:
 

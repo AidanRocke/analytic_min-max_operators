@@ -2,7 +2,7 @@ using Statistics
 
 function analytic_max(X::Array{Float64, 1},N::Int64)
 
-	mu, sigma = mean(X), std(X)
+    mu, sigma = mean(X), std(X)
 
     Z_score = (X.-mu)./sigma
 
@@ -16,7 +16,7 @@ end
 
 function analytic_min(X::Array{Float64, 1},N::Int64)
 
-	mu, sigma = mean(X), std(X)
+    mu, sigma = mean(X), std(X)
 
     Z_score = (X.-mu)./sigma
 
