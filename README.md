@@ -13,18 +13,47 @@ by the [infinity norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_fini
 ```julia
 function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 
-    ## if case == 1 apply analytic_min() otherwise apply analytic_max()
-    q = N*(-1)^case
+    """
+        An analytic approximation to the min and max operators. 
 
-    mu, sigma = mean(X), std(X)
+        Inputs: 
+            X: a vector from R^n where n is unknown
 
-    Z_score = (X.-mu)./sigma
+            N: an integer such that the approximation of max(X) 
+               improves with increasing N.
 
-    neg_exp_sum = sum(exp.(-Z_score*q))
 
-    log_ = log(neg_exp_sum)/q
+            case: If case == 1 apply analytic_min(), otherwise 
+                  apply analytic_max() if case == 2
 
-    return (log_*sigma)+mu
+
+        Output: 
+
+            An approximation to max(X) if case == 1, and min(X) if 
+            case == 2
+    """
+
+    if (case != 1)*(case != 2)
+
+        return print("Error: case isn't well defined")
+
+    else
+
+        ## q is the degree of the approximation: 
+        q = N*(-1)^case
+
+        mu, sigma = mean(X), std(X)
+
+        ## standardise the vector so it has zero mean and unit variance:
+        Z_score = (X.-mu)./sigma
+
+        exp_sum = sum(exp.(-Z_score*q))
+
+        log_ = log(exp_sum)/q
+
+        return (log_*sigma)+mu
+
+    end
 
 end
 ```
