@@ -39,18 +39,15 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
             N: an integer such that the approximation of max(X) 
                improves with increasing N.
 
-
             case: If case == 1 apply analytic_min(), otherwise 
                   apply analytic_max() if case == 2
 
-
         Output: 
 
-            An approximation to max(X) if case == 1, and min(X) if 
+            An approximation to min(X) if case == 1, and max(X) if 
             case == 2
     """
 
-    ## 
     if (case != 1)*(case != 2)
 
         return print("Error: case isn't well defined")
