@@ -13,7 +13,7 @@ by the [infinity norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_fini
 ```julia
 function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 
-    ## if case == 1 apply analytic_min() else, apply analytic_max()
+    ## if case == 1 apply analytic_min() otherwise apply analytic_max()
     q = N*(-1)^case
 
     mu, sigma = mean(X), std(X)
