@@ -56,6 +56,11 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 end
 ```
 
-## Articles worth reading: 
+## Discussion: 
+
+It took me about an hour to come up with my solution so I doubt this method is either original or state-of-the-art. 
+If you know of a more robust method, feel free to join the discussion on the [MathOverflow](https://mathoverflow.net/questions/352548/analytic-approximations-of-the-min-and-max-operators).
+
+## Relevant articles:  
 1. [analytic approximations of the min and max operators](https://mathoverflow.net/questions/352548/analytic-approximations-of-the-min-and-max-operators)
 2. [Differentiable approximations to the min and max operators](https://keplerlounge.com/applied-math/2020/02/13/analytic-min-max.html)
