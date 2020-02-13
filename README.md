@@ -14,7 +14,7 @@ by the [infinity norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_fini
 function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 
     """
-        An analytic approximation to the min and max operators. 
+        An analytic approximation to the min and max operators
 
         Inputs: 
             X: a vector from R^n where n is unknown
@@ -22,10 +22,8 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
             N: an integer such that the approximation of max(X) 
                improves with increasing N.
 
-
             case: If case == 1 apply analytic_min(), otherwise 
                   apply analytic_max() if case == 2
-
 
         Output: 
 
@@ -44,7 +42,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 
         mu, sigma = mean(X), std(X)
 
-        ## standardise the vector so it has zero mean and unit variance:
+        ## rescale vector so it has zero mean and unit variance:
         Z_score = (X.-mu)./sigma
 
         exp_sum = sum(exp.(-Z_score*q))
@@ -57,3 +55,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 
 end
 ```
+
+## Articles worth reading: 
+1. [analytic approximations of the min and max operators](https://mathoverflow.net/questions/352548/analytic-approximations-of-the-min-and-max-operators)
+2. [Differentiable approximations to the min and max operators](https://keplerlounge.com/applied-math/2020/02/13/analytic-min-max.html)
