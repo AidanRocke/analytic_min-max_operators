@@ -45,7 +45,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
         ## rescale vector so it has zero mean and unit variance:
         Z_score = (X.-mu)./sigma
 
-        exp_sum = sum(exp.(-Z_score*q))
+        exp_sum = sum(exp.(Z_score*q))
 
         log_ = log(exp_sum)/q
 
