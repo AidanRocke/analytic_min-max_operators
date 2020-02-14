@@ -36,7 +36,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
         Inputs: 
             X: a vector from R^n where n is unknown
 
-            N: an integer such that the approximation of max(X) 
+            N: an integer such that the approximation
                improves with increasing N.
 
             case: If case == 1 apply analytic_min(), otherwise 

@@ -19,7 +19,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
         Inputs: 
             X: a vector from R^n where n is unknown
 
-            N: an integer such that the approximation of max(X) 
+            N: an integer such that the approximation
                improves with increasing N.
 
             case: If case == 1 apply analytic_min(), otherwise 
@@ -56,7 +56,7 @@ function analytic_min_max(X::Array{Float64, 1},N::Int64,case::Int64)
 end
 ```
 
-## Discussion: 
+## Discussion: 
 
 It took me about an hour to come up with my solution so I doubt this method is either original or state-of-the-art. 
 If you know of a more robust method, feel free to join the discussion on the [MathOverflow](https://mathoverflow.net/questions/352548/analytic-approximations-of-the-min-and-max-operators).
